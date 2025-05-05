@@ -1,0 +1,32 @@
+1.select empno,ename,job,hiredate
+from emp
+where job='MANAGER'
+
+2.select ename,job,sal,comm
+from emp
+where sal>comm
+
+3.select ename,job,sal
+from emp
+where sal<>1200
+
+4.select empno,job,sal
+from emp
+where sal between 1200 and 4000
+
+5.select ename
+from emp
+where ename like '%T%'
+
+6.select ename,job
+from emp
+where ename not in ('SMITH','TURNER','SCOTT')
+
+7.select ename,job,hiredate
+from emp
+order by ename DESC,job DESC,hiredate DESC
+
+8.select ename,job,sal,(sal*0.05) "INCREMENT"
+from emp
+where job in ('MANAGER','PRESIDENT','ANALYST')
+order by "INCREMENT"
