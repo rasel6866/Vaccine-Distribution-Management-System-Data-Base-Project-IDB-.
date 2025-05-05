@@ -1,0 +1,37 @@
+
+select ename, job, Hiredate
+from emp
+where hiredate between '17-DEC-80' and '19-DEC-82'
+
+select ename, job, Hiredate
+from emp
+where ENAME IN ('SMITH', 'TURNER')
+
+select ename, job, Hiredate, mgr
+from emp
+where MGR IN (7902,7566)
+
+
+select ename
+from emp
+where ename like '%A%'
+
+select ename
+from emp
+where ename like '%S'
+
+
+select * from emp
+
+select comm, ename from emp
+where comm is null
+
+
+select ename, job, Hiredate, mgr
+from emp
+where MGR not IN (7902,7566)
+
+
+select ename, job, hiredate, sal*12 annsal
+from emp
+order by annsal desc, hiredate
